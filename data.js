@@ -1,66 +1,80 @@
-import anisphiaHello from './assets/anisphiaHello.jfif';
-import anisphiaKeychain from './assets/anisphiaKeychain.jfif';
-import anisphiaSword from './assets/anisphiaSword.jfif';
-import euphieElegant from './assets/euphieElegant.jfif';
-import euphylliaKeychain from './assets/euphylliaKeychain.jfif';
-import euphylliaMahou from './assets/euphylliaMahou.jfif';
-import Illya from './assets/Illya.jfif';
-import shyEuphie from './assets/shyEuphie.jfif';
-import winkAnis from './assets/winkAnis.jfif';
+import basilBottle from "./assets/basil-bottle.webp";
+import lemonBottle from "./assets/lemon-bottle.webp";
+import garlicBottle from "./assets/garlic-bottle.webp";
+import rosemaryBottle from "./assets/rosemary-bottle.webp";
+import chiliBottle from "./assets/chili-bottle.webp";
+import delicateBottle from "./assets/delicate-bottle.webp";
+import mediumBottle from "./assets/medium-bottle.webp";
+import boldBottle from "./assets/bold-bottle.webp";
+
+export const cartItems = [
+  {
+    id: "123",
+    name: "Basil",
+    price: "$26.00",
+    imageName: basilBottle,
+  },
+  {
+    id: "234",
+    name: "Lemon",
+    price: "$26.00",
+    imageName: lemonBottle,
+  },
+  {
+    id: "345",
+    name: "Garlic",
+    price: "$26.00",
+    imageName: garlicBottle,
+  },
+];
 
 export const products = [
-    {
-        id: '1',
-        name: 'Anisphia Hello',
-        price: '$15.00',
-        image: anisphiaHello,
-    },
-    {
-        id: '2',
-        name: 'Anisphia Keychain',
-        price: '$8.00',
-        image: anisphiaKeychain,
-    },
-    {
-        id: '3',
-        name: 'Anisphia Sword',
-        price: '$20.00',
-        image: anisphiaSword,
-    },
-    {
-        id: '4',
-        name: 'Euphie Elegant',
-        price: '$18.00',
-        image: euphieElegant,
-    },
-    {
-        id: '5',
-        name: 'Euphyllia Keychain',
-        price: '$8.00',
-        image: euphylliaKeychain,
-    },
-    {
-        id: '6',
-        name: 'Euphyllia Mahou',
-        price: '$22.00',
-        image: euphylliaMahou,
-    },
-    {
-        id: '7',
-        name: 'Illya',
-        price: '$16.00',
-        image: Illya,
-    },
-    {
-        id: '8',
-        name: 'Shy Euphie',
-        price: '$19.00',
-        image: shyEuphie,
-    },
-    {
-        id: '9',
-        name: 'Wink Anis',
-        price: '$14.00',
-        image: winkAnis,
-    },
+  {
+    id: "123",
+    name: "Basil",
+    price: "$26.00",
+    imageName: basilBottle,
+  },
+  {
+    id: "234",
+    name: "Lemon",
+    price: "$26.00",
+    imageName: lemonBottle,
+  },
+  {
+    id: "345",
+    name: "Garlic",
+    price: "$26.00",
+    imageName: garlicBottle,
+  },
+  {
+    id: "456",
+    name: "Rosemary",
+    price: "$26.00",
+    imageName: rosemaryBottle,
+  },
+  {
+    id: "567",
+    name: "Chili",
+    price: "$26.00",
+    imageName: chiliBottle,
+  },
+  {
+    id: "678",
+    name: "Delicate",
+    price: "$24.50",
+    imageName: delicateBottle,
+  },
+  {
+    id: "789",
+    name: "Medium",
+    price: "$24.50",
+    imageName: mediumBottle,
+  },
+  {
+    id: "890",
+    name: "Bold",
+    price: "$24.50",
+    imageName: boldBottle,
+  },
 ];
