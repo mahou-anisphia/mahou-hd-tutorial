@@ -4,8 +4,8 @@
   <!-- Since we want to pass the products variable, we use the colon (:) as the shorthand for v-bind -->
 </template>
 <script>
-import { products } from "../temp-data";
 import ProductList from "../components/ProductList.vue";
+import axios from "axios";
 
 export default {
   name: "ProductPage",
@@ -14,8 +14,13 @@ export default {
   },
   data() {
     return {
-      products,
+      products: [],
     };
+  },
+  async created() {
+    const respond = await axios.get("/api/products");
+    const products = respond.data;
+    this.products = products;
   },
 };
 </script>

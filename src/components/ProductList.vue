@@ -6,7 +6,7 @@
       v-bind:key="product.id"
       class="product-item"
     >
-      <img :src="product.imageName" />
+      <img :src="product.imageUrl" />
       <h3 class="product-name" v-cloak>{{ product.name }}</h3>
       <p class="product-price" v-cloak>{{ product.price }}</p>
       <RouterLink :to="'/products/' + product.id">

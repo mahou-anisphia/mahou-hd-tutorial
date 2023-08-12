@@ -92,6 +92,8 @@
 
   .grey-button {
     background-color: #888;
+    width: 100%;
+    margin-top: 16px;
   }
 
   .nav-bar {
@@ -190,4 +192,18 @@
   .remove-button {
     flex: 1;
     margin: auto;
+  }
+
+  @media (max-width: 768px) {
+    .nav-bar {
+      border-bottom: none;
+      height: 120px;
+      width: 100%;
+    }
+    .grid-wrap{
+      justify-content: center;
+    }
+    .cart-link{
+      margin-top: 40px;
+    }
   }
