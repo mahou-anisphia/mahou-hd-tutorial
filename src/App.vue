@@ -1,20 +1,17 @@
 <template>
-  <NavBar :user="user"></NavBar>
-  <div class="page-wrap">
+  <div>
     <RouterView :user="user"></RouterView>
   </div>
+  <PageFooter></PageFooter>
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import "bootstrap/dist/css/bootstrap.css";
+import PageFooter from "./components/PageFooter.vue";
 
 export default {
   name: "App",
-  components: {
-    NavBar,
-  },
   created() {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
@@ -26,7 +23,19 @@ export default {
       user: null,
     };
   },
+  components: {
+    PageFooter,
+  },
 };
 </script>
 
-<style></style>
+<style>
+.main-menu {
+  margin-bottom: 75px;
+}
+@media (max-width: 768px) {
+  .main-menu {
+    margin-bottom: 55px;
+  }
+}
+</style>

@@ -5,6 +5,8 @@ import ShoppingCart from "./pages/ShoppingCart.vue";
 import ProductsPage from "./pages/ProductsPage.vue";
 import DetailPage from "./pages/ProductDetailPage.vue";
 import NotFound from "./pages/NotFoundPage";
+import HomePage from "./pages/HomePage";
+import CheckOut from "./pages/CheckOut";
 import "./main.css";
 
 // Import the functions you need from the SDKs you need
@@ -45,7 +47,11 @@ createApp(App)
         },
         {
           path: "/",
-          redirect: "/products",
+          component: HomePage,
+        },
+        {
+          path: "/cart/checkout",
+          component: CheckOut,
         },
         {
           path: "/:pathMatch(.*)*",

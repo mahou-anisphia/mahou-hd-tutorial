@@ -1,5 +1,19 @@
 <template>
-  <div v-if="product">
+  <div class="main-menu">
+    <NavBar :user="user"></NavBar>
+  </div>
+  <div v-if="product" class="page-wrap container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><router-link to="/">Home</router-link></li>
+        <li class="breadcrumb-item">
+          <router-link to="/products">Products</router-link>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page" v-cloak>
+          {{ product.name }}
+        </li>
+      </ol>
+    </nav>
     <h1>Product Details</h1>
     <div class="img-wrap">
       <img :src="product.imageUrl" />
@@ -28,6 +42,7 @@
 </template>
 <script>
 import NotFoundPage from "./NotFoundPage.vue";
+import NavBar from "../components/NavBar.vue";
 import axios from "axios";
 import {
   getAuth,
@@ -51,6 +66,7 @@ export default {
         id: this.$route.params.id,
       });
       alert(`Successfully added item to cart!`);
+      this.$router.push("/products");
     },
     async signIn() {
       const email = prompt("Enter your E-mail to sign in!");
@@ -66,6 +82,7 @@ export default {
   },
   components: {
     NotFoundPage,
+    NavBar,
   },
   async created() {
     const auth = getAuth();
@@ -73,7 +90,6 @@ export default {
       const email = window.localStorage.getItem("emailToSignIn");
       await signInWithEmailLink(auth, email, window.location.href);
       alert("Logged In!");
-      window.localStorage.removeItem("emailToSignIn");
     }
 
     const respond = await axios.get(`/api/products/${this.$route.params.id}`);
@@ -101,7 +117,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 [v-cloak] {
   display: none;
 }

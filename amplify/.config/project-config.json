@@ -1,0 +1,17 @@
+{
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "farmmanagement",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "vue",
+    "config": {
+      "SourceDir": "./",
+      "DistributionDir": "./dist",
+      "BuildCommand": "npm run build",
+      "StartCommand": "npm run serve"
+    }
+  }
+}

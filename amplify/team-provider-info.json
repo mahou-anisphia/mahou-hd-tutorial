@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-farmmanagement-staging-162857-authRole",
+      "UnauthRoleArn": "arn:aws:iam::872536645273:role/amplify-farmmanagement-staging-162857-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::872536645273:role/amplify-farmmanagement-staging-162857-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-farmmanagement-staging-162857-deployment",
+      "UnauthRoleName": "amplify-farmmanagement-staging-162857-unauthRole",
+      "StackName": "amplify-farmmanagement-staging-162857",
+      "StackId": "arn:aws:cloudformation:us-east-1:872536645273:stack/amplify-farmmanagement-staging-162857/6ca905a0-7741-11ee-b9e4-12c0d092d679",
+      "AmplifyAppId": "d16wl0z6xkonly"
+    }
+  }
+}

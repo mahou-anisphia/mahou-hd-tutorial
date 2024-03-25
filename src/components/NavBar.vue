@@ -1,6 +1,6 @@
 <template>
   <div class="nav-bar">
-    <RouterLink to="/products" class="products-link">
+    <RouterLink to="/" class="products-link">
       <div class="logo-wrap">
         <img :src="logo" />
       </div>
@@ -28,6 +28,7 @@ export default {
     signOut() {
       const auth = getAuth();
       signOut(auth);
+      window.localStorage.removeItem("emailToSignIn");
     },
   },
   props: ["user"],
